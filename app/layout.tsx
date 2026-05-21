@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { MetaPixel } from "@/components/MetaPixel";
 import { BOOK_TITLE } from "@/lib/constants";
 import { withBasePath } from "@/lib/paths";
 
@@ -30,6 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen font-sans antialiased">
+        <MetaPixel />
+        <GoogleAnalytics />
         {children}
       </body>
     </html>

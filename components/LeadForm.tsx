@@ -1,5 +1,6 @@
 "use client";
 
+import { trackGuideLeadOnce } from "@/lib/analytics";
 import { withBasePath } from "@/lib/paths";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
@@ -52,6 +53,7 @@ export function LeadForm({
         return;
       }
 
+      trackGuideLeadOnce();
       router.push("/thank-you");
     } catch {
       setError("Network error. Please check your connection and try again.");

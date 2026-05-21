@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { AnalyticsLeadEvent } from "@/components/AnalyticsLeadEvent";
 import { ThankYouContent } from "@/components/ThankYouContent";
 import {
   ACCESS_COOKIE_NAME,
@@ -18,6 +19,7 @@ export default async function ThankYouPage() {
 
   return (
     <>
+      <AnalyticsLeadEvent />
       <Header />
       <ThankYouContent />
       <Footer />

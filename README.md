@@ -29,6 +29,8 @@ And temporarily set `basePath` to empty in `next.config.ts` or match the env.
 | `KLAVIYO_API_KEY` | Private API key (server only) |
 | `KLAVIYO_LIST_ID` | Target list ID |
 | `NEXT_PUBLIC_BASE_PATH` | `/gold-fever-e-book` in production |
+| `NEXT_PUBLIC_META_PIXEL_ID` | Meta Pixel ID for PageView + Lead conversion tracking |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 measurement ID (e.g. `G-6GF0J7HPH3`) |
 
 ## Deploy (Vercel)
 
