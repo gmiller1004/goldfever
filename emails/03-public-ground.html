@@ -1,0 +1,74 @@
+<!--
+  SUBJECT: Public land is public — but is the gold open?
+  PREVIEW: Claimed ground, mineral rights, and what to check before you dig. (Hint: GPAA.)
+  TRIGGER: Flow Email 4
+  DELAY: 2 days after Email 3 (day 6 total)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    ul { margin:0 0 16px; padding-left:22px; }
+    li { margin-bottom:8px; }
+    .callout { background:#fff8e6; border:1px solid #e8d48a; border-left:4px solid #c9a227; padding:16px 18px; margin:20px 0; font-size:15px; }
+    .callout p { margin:0 0 10px; }
+    .callout p:last-child { margin:0; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 0 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>After fifty years on the water, I still get fired up about how much <strong>federal land</strong> we have out West — BLM, Forest Service, millions of acres that belong to all of us.</p>
+    <p>But here's the part a lot of newcomers miss, and it's important:</p>
+    <div class="callout">
+      <p><strong>Public land ≠ open minerals everywhere.</strong></p>
+      <p>You can hike, camp, and enjoy a whole lot of ground as the public. <strong>Extracting gold is a different question.</strong> Much of the creek bottom and bench ground you'd want to work is already tied up in <strong>active mining claims</strong> — sometimes marked with posts and corner tags, sometimes not obvious until you've done your homework.</p>
+      <p>Before you shovel, <strong>research it</strong>: check BLM claim records, state databases, maps in your guide, and on-the-ground markers. If it's claimed and it isn't yours (or a GPAA claim you're cleared to use), <strong>stay off</strong>. Respect the claim. Find unclaimed open ground or ground where you have permission.</p>
+    </div>
+    <p>On ground that <em>is</em> truly open to casual prospecting, the day-to-day rules are usually straightforward:</p>
+    <ul>
+      <li><strong>Hand pan + shovel?</strong> Often fine on open federal ground — still check local notices.</li>
+      <li><strong>Metal detecting?</strong> Allowed in many areas; not everywhere — read the district rules.</li>
+      <li><strong>Small sluice on the bank?</strong> Common on BLM/FS where minerals aren't locked up — verify first.</li>
+      <li><strong>Camp while you prospect?</strong> 14-day stay limits, then move down the road.</li>
+    </ul>
+    <p>Always steer clear of National Parks, monuments, tribal lands, wilderness restrictions, and water where dredging is prohibited.</p>
+    <p>Your guide includes a <strong>2025 state-by-state snapshot</strong> (Alaska to Georgia) because rules shift like creek levels. That's why Dad started GPAA — so members have <strong>member-only claims</strong> where access is already sorted, plus the Property Guide and Mining Guide when you're tired of guessing whether that bar is claimed.</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Skip the claim-research rabbit hole</p>
+      <p style="margin:0 0 16px;font-size:15px;">GPAA membership unlocks <strong>200+ member-only claims</strong> — ground you're cleared to work — plus the Property Guide and Mining Guide with coordinates and member trip reports. Know before you load the truck.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-03-join" class="btn">Membership &amp; claims access</a>
+      <a href="https://www.goldprospectors.org/properties?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-03-properties" class="btn btn-dark">Browse claims</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Study ground at the kitchen table</p>
+      <p style="margin:0 0 16px;font-size:15px;">Pick your bag size, set your schedule, and pan Lucky Nugget when you can't run to a claim — about 1 in 25 shipments carries a bonus bag or extra gold.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-03-paydirt" class="btn btn-dark">Lucky Nugget subscription →</a>
+    </div>
+    {% endif %}
+
+    <p>Coming up: the five tools I'd pack if I were starting fresh tomorrow.</p>
+    <p>— Tom</p>
+  </div>
+  <div class="footer">
+    <p>GPAA · <a href="{{ manage_preferences }}">Preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

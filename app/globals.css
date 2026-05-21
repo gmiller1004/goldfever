@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gpaa-gold: #c9a227;
+  --color-gpaa-gold-dark: #9a7b1a;
+  --color-gpaa-gold-light: #e8d48a;
+  --color-gpaa-slate: #1c2834;
+  --color-gpaa-slate-muted: #3d4f5f;
+  --color-gpaa-cream: #f7f4ef;
+  --color-gpaa-cream-dark: #ebe6dc;
+  --color-gpaa-river: #2d5a6b;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-gpaa-cream);
+  color: var(--color-gpaa-slate);
+}
+
+/* Subtle creek-shimmer for hero */
+.hero-pattern {
+  background-color: var(--color-gpaa-slate);
+  background-image:
+    radial-gradient(
+      ellipse 80% 60% at 70% 20%,
+      rgb(201 162 39 / 0.15),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 10% 80%,
+      rgb(45 90 107 / 0.35),
+      transparent 50%
+    ),
+    linear-gradient(165deg, #1c2834 0%, #243442 45%, #1a2630 100%);
+}

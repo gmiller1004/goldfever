@@ -1,0 +1,32 @@
+SUBJECT: You're in — your Gold Fever guide + full episode inside
+
+Well howdy{% if first_name %}, {{ first_name }}{% endif %} —
+
+Tom Massie here. You just grabbed Gold Fever: No-Hassle Guide To Finding Real Gold In America, and I'm downright glad you're along for the ride.
+
+YOUR DOWNLOADS (save these):
+PDF: https://cdn.shopify.com/s/files/1/2568/9508/files/Gold_Fever-No-Hassle_Guide_to_Finding_Gold_Across_America.pdf?v=1763166156&utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-pdf
+
+EPUB: https://cdn.shopify.com/s/files/1/2568/9508/files/Gold-Fever-No-Hassle-Guide-to-Finding-Real-Gold-Across-America-By-Tom-Massie.epub?v=1763232251&utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-epub
+
+BONUS — full 45-minute Gold Fever episode:
+https://youtu.be/dZNEZwQDmsY?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-video
+
+Over the next couple of weeks I'll send short notes from the book.
+
+{% if not person|lookup:'Active Membership Type' %}
+The guide is a general resource on its own. When you're ready, GPAA membership unlocks member-only claims (200+ areas, 90,000+ acres):
+https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-join
+{% endif %}
+
+{% if person|lookup:'Active Membership Type' %}
+Between creek trips — Lucky Nugget Paydirt ships real gold-bearing dirt on your schedule:
+https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-paydirt
+{% endif %}
+
+Gold's where you find it — but you gotta look.
+
+Tom Massie
+Co-founder, GPAA, LDMA, Outdoor Channel
+
+Unsubscribe: {{ unsubscribe_url }}

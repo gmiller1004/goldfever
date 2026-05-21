@@ -1,0 +1,67 @@
+<!--
+  SUBJECT: Buzzard's line — and your first Saturday on the creek
+  PREVIEW: Gold's where you find it, but you gotta look. Tom's last note in this series.
+  TRIGGER: Flow Email 8
+  DELAY: 5 days after Email 7 (day 21 total)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .sig-title { font-size:14px; color:#3d4f5f; }
+    .body p { margin:0 0 16px; }
+    .quote { border-left:4px solid #c9a227; padding:14px 18px; margin:22px 0; font-style:italic; font-size:18px; background:#f7f4ef; text-align:center; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:14px 24px; border-radius:4px; margin:8px 8px 0 0; font-size:15px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>We've covered a heap of ground together in these notes — where gold hides, how to ask permission, public rules, the five tools, family on the creek, and leaving the place better than we found it.</p>
+    <p>At the end of the trail… or I guess I should say at the end of <em>this</em> creek, because once the fever grabs you there ain't no real end.</p>
+    <div class="quote">
+      <p style="margin:0;">"Gold's where you find it — but you gotta look."</p>
+      <p style="margin:12px 0 0;font-size:14px;font-style:normal;">— George "Buzzard" Massie</p>
+    </div>
+    <p>My dad said that. I still hear it every time I walk a new bar.</p>
+    <p>The ounces in the bottle are sweet — but the gold in a kid's eyes when that first flake hits the pan? <strong>That's forever.</strong></p>
+    <p>You've got the guide. You've got the episode. You've got everything you need for a no-hassle first trip.</p>
+    <p><strong>Quit reading. Go look.</strong></p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">When you're ready — we're here</p>
+      <p style="margin:0 0 16px;font-size:15px;">The guide stands on its own. When you're ready, the Gold Standard is $199 to join, then $120/year — <strong>member-only claims</strong>, magazine, chapters, welcome kit with pan and Mining Guide.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-07-join" class="btn">Become a GPAA member</a>
+      <a href="https://cdn.shopify.com/s/files/1/2568/9508/files/Gold_Fever-No-Hassle_Guide_to_Finding_Gold_Across_America.pdf?v=1763166156&utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-07-pdf" class="btn btn-dark">Re-download the guide</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Keep the fever between Saturdays</p>
+      <p style="margin:0 0 16px;font-size:15px;">You're already on the claims — bless you. Stock Lucky Nugget for the rainy weeks: real gold in the dirt, shipped when you say, bonuses in roughly 1 of every 25 bags.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-07-paydirt" class="btn btn-dark">Lucky Nugget subscription →</a>
+    </div>
+    {% endif %}
+
+    <p>I'll see you on the creek.</p>
+    <p><strong>Tom Massie</strong><br /><span class="sig-title">Co-founder, GPAA, LDMA, Outdoor Channel</span></p>
+    <p style="font-size:14px;color:#3d4f5f;">P.S. — You'll keep hearing from GPAA when it matters. Unsubscribe anytime if your inbox needs a rest.</p>
+  </div>
+  <div class="footer">
+    <p>Gold Prospectors Association of America · Temecula, CA<br />
+    <a href="{{ manage_preferences }}">Manage preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!--
+  SUBJECT: The best gold is in the kids' eyes
+  PREVIEW: Kia's first nugget. Grandpas being heroes again. Bring the whole crew.
+  TRIGGER: Flow Email 6
+  DELAY: 3 days after Email 5 (day 12 total)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 0 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>If there's one thing I'm prouder of than any jar of nuggets on my shelf, it's watching an entire family catch the fever at the same time.</p>
+    <p>Gold fever is a <strong>family disease</strong> — and thank the good Lord there ain't no cure.</p>
+    <p>My kids grew up with pans in their hands. My daughter Kia caught the detecting bug harder than anybody — one afternoon in Last Chance Canyon her coil screamed, she dug six inches, and pulled up a nugget rough and yellow as butter. She looked up with eyes brighter than the gold and hollered, <em>"Dad! I got one!"</em> That little piece still sits on my desk.</p>
+    <p>I've seen shy teenagers turn into chatterboxes after their first flake. I've seen husbands and wives knee-deep in the same hole, laughing at each other covered in mud. I've seen grandkids hug their granddad's neck because <em>"we found GOLD, Papa!"</em></p>
+    <p>Calm creeks, easy access, no big iron required — just sunshine and patience. Throw a picnic on the bank and watch the magic happen.</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Chapters are where the campfire stories live</p>
+      <p style="margin:0 0 16px;font-size:15px;">Local GPAA clubs run digs, share ground knowledge, and welcome new folks — the fastest way to learn the ropes next to home. Membership unlocks <strong>member-only claims</strong> for your household.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-05-join" class="btn">Join the community</a>
+      <a href="https://www.goldprospectors.org/chapters?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-05-chapters" class="btn btn-dark">Find a chapter</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Family night at the picnic table</p>
+      <p style="margin:0 0 16px;font-size:15px;">Order Lucky Nugget for the kitchen — kids classify, parents pan, everybody yells. Automatic shipments mean there's always another bag to open.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-05-paydirt" class="btn btn-dark">Lucky Nugget for the family →</a>
+    </div>
+    {% endif %}
+
+    <p>Next: leave it cleaner than you found it — the code that keeps creeks open.</p>
+    <p>— Tom</p>
+  </div>
+  <div class="footer">
+    <p>GPAA · <a href="{{ manage_preferences }}">Preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

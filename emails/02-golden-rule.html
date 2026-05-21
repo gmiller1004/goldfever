@@ -1,0 +1,64 @@
+<!--
+  SUBJECT: The two sentences that open locked gates
+  PREVIEW: Nine times out of ten they say yes — sometimes they join you in hip boots.
+  TRIGGER: Flow Email 3
+  DELAY: 2 days after Email 2 (day 4 total)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    .quote { border-left:4px solid #c9a227; padding:12px 16px; margin:20px 0; font-style:italic; background:#f7f4ef; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 0 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>The single most important thing my dad George "Buzzard" Massie ever taught me — and the thing I repeated on every Gold Fever shoot:</p>
+    <div class="quote">
+      <p style="margin:0;"><strong>Private property is private. Always ask permission first. Every single time.</strong></p>
+    </div>
+    <p>But here's the part that'll make you smile: when you ask the right way, folks say <strong>yes</strong> way more than no — and half the time they walk you to the honey hole themselves.</p>
+    <p>These two sentences worked from Georgia to Alaska:</p>
+    <div class="quote">
+      <p style="margin:0 0 12px;">"Hi there, I'm Tom. My family and I love panning for gold — just hand tools, no mess. Would you mind if we spent a couple hours on your creek today? We'll fill every hole and leave it cleaner than we found it."</p>
+    </div>
+    <p>Smile. Mean it. Offer to share any nice pieces (most laugh and say keep it). You'll be amazed.</p>
+    <p>One of my favorite days was in Georgia — Mr. Johnson in hip boots with us, telling stories about his granddad's two-ounce nugget from the '30s. We left with full pans, homemade pickles, and a standing invitation.</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Tired of knocking on doors?</p>
+      <p style="margin:0 0 16px;font-size:15px;"><strong>Member-only GPAA claims</strong> are set up so members can show up, pan, and focus on color — not worry about whose fence line you're on. That's why we built the association in '68.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-02-join" class="btn">See how claims access works</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Practice the permission speech at home</p>
+      <p style="margin:0 0 16px;font-size:15px;">Lucky Nugget Paydirt is a guilt-free way to run pans with the grandkids in the driveway — same dig, classify, pan rhythm, zero landowners required.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-02-paydirt" class="btn btn-dark">Lucky Nugget →</a>
+    </div>
+    {% endif %}
+
+    <p>Next note: how to read public ground without drowning in rules.</p>
+    <p>— Tom</p>
+  </div>
+  <div class="footer">
+    <p>GPAA · <a href="{{ manage_preferences }}">Preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

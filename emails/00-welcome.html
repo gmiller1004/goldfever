@@ -1,0 +1,65 @@
+<!--
+  SUBJECT: You're in — your Gold Fever guide + full episode inside
+  PREVIEW: PDF, EPUB, and a 45-minute Gold Fever episode. Tom's creek notes start tomorrow.
+  TRIGGER: Immediately after list subscribe (Flow Email 1)
+  DELAY: 0 (immediate)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome — Gold Fever Guide</title>
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 6px 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+    .sig-title { font-size:14px; color:#3d4f5f; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Well howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>Tom Massie here. You just grabbed <em>Gold Fever: No-Hassle Guide To Finding Real Gold In America</em>, and I'm downright glad you're along for the ride.</p>
+    <p><strong>Your downloads (save these):</strong></p>
+    <p>
+      <a href="https://cdn.shopify.com/s/files/1/2568/9508/files/Gold_Fever-No-Hassle_Guide_to_Finding_Gold_Across_America.pdf?v=1763166156&utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-pdf" class="btn">Download PDF</a>
+      <a href="https://cdn.shopify.com/s/files/1/2568/9508/files/Gold-Fever-No-Hassle-Guide-to-Finding-Real-Gold-Across-America-By-Tom-Massie.epub?v=1763232251&utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-epub" class="btn btn-dark">Download EPUB</a>
+    </p>
+    <p><strong>Your bonus:</strong> a full <strong>45-minute Gold Fever episode</strong> — real families, real creeks, the way we filmed it for Outdoor Channel.</p>
+    <p><a href="https://youtu.be/dZNEZwQDmsY?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-video" class="btn">Watch the episode →</a></p>
+    <p>Over the next couple of weeks I'll send short notes from the book — where gold hides, how to ask permission, the five tools I'd pack tomorrow, and the stories Dad drilled into me on the creek.</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Already thinking about where to dig legally?</p>
+      <p style="margin:0 0 16px;font-size:15px;">The guide is a general resource — plenty to get you started on your own. When you're ready, <strong>GPAA membership unlocks member-only claims</strong> across 200+ prospecting areas (90,000+ acres), plus local chapters and the Property Guide.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-join" class="btn">Peek at membership (no obligation)</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Between creek trips</p>
+      <p style="margin:0 0 16px;font-size:15px;">You're already on the claims — nice. If winter or work keeps you home, Lucky Nugget Paydirt is how a lot of us scratch the itch: real dirt, real gold, delivered on your schedule.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-00-paydirt" class="btn btn-dark">Lucky Nugget subscription →</a>
+    </div>
+    {% endif %}
+
+    <p>Gold's where you find it — but you gotta look.</p>
+    <p>I'll see you on the creek,<br /><strong>Tom Massie</strong><br /><span class="sig-title">Co-founder, GPAA, LDMA, Outdoor Channel</span></p>
+  </div>
+  <div class="footer">
+    <p>Gold Prospectors Association of America<br />
+    <a href="{{ manage_preferences }}">Manage preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

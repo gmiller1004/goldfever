@@ -1,0 +1,66 @@
+<!--
+  SUBJECT: Fill your holes (Dad's rule that keeps gates open)
+  PREVIEW: Take only gold and pictures. Leave only footprints. Pass it on.
+  TRIGGER: Flow Email 7
+  DELAY: 4 days after Email 6 (day 16 total)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    ul { margin:0 0 16px; padding-left:22px; }
+    li { margin-bottom:8px; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 0 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>Before we go any further, I need to talk straight with you about something that burns in my heart.</p>
+    <p>We're the luckiest folks on God's green earth — we get to chase shiny in some of the prettiest country there is. That privilege comes with a <strong>big responsibility</strong>. If we don't take care of the land, the water, and the folks who own it, the gates slam shut and they don't open easy.</p>
+    <p>Dad drilled it into me: <em>"Son, you leave every place better than you found it, or you don't deserve to come back."</em></p>
+    <p>That's the code we lived by on Gold Fever, and it's the code I want every one of you to tattoo on your brain:</p>
+    <ul>
+      <li><strong>Fill every hole</strong> — detector scoop or test pit, rake it smooth.</li>
+      <li><strong>Pack out every scrap of trash</strong> — yours and anybody else's.</li>
+      <li><strong>Don't tear up banks or live trees</strong> — fish expect their rocks back.</li>
+      <li><strong>Be quiet and respectful</strong> — we're guests in God's cathedral.</li>
+    </ul>
+    <p>I've seen claims closed forever because one knucklehead left a mess. I've seen ranchers open brand-new stretches because a family filled every hole, picked up beer cans, and left a thank-you note on the porch.</p>
+    <p>Guess which one keeps the fever alive for the next generation?</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Prospect where you're welcome</p>
+      <p style="margin:0 0 16px;font-size:15px;">GPAA stewards <strong>member-only claims</strong> so members can enjoy ground responsibly — and pass the tradition on with a clear conscience.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-06-join" class="btn">Responsible access with GPAA</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Teach the kids at home first</p>
+      <p style="margin:0 0 16px;font-size:15px;">Lucky Nugget is a clean, controlled way to practice stewardship indoors — classify, pan, pack up the tailings, no creek harmed. Then take those habits to the claim.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-06-paydirt" class="btn btn-dark">Lucky Nugget →</a>
+    </div>
+    {% endif %}
+
+    <p>One more note from me coming soon — then go find some color.</p>
+    <p>— Tom</p>
+  </div>
+  <div class="footer">
+    <p>GPAA · <a href="{{ manage_preferences }}">Preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

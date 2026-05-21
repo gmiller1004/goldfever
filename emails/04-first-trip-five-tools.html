@@ -1,0 +1,68 @@
+<!--
+  SUBJECT: 5 tools, one creek, color by lunch
+  PREVIEW: Tom's exact weekend checklist from 20 years of Gold Fever shoots.
+  TRIGGER: Flow Email 5
+  DELAY: 3 days after Email 4 (day 9 total)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    ol { margin:0 0 16px; padding-left:22px; }
+    li { margin-bottom:10px; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 0 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>You've got the fever. You've read the rules. Now let's <strong>load the truck</strong>.</p>
+    <p>Chapter 11 is the dead-simple plan I used on every Gold Fever shoot for twenty years. Here's the kit — under a hundred bucks if you're starting from zero:</p>
+    <ol>
+      <li><strong>14-inch gold pan</strong> (green or blue — gold shows up bright)</li>
+      <li><strong>Folding shovel</strong> or army entrenching tool</li>
+      <li><strong>Classifier screen</strong> (½-inch mesh on the pan)</li>
+      <li><strong>Snuffer bottle + vial</strong></li>
+      <li><strong>Small pry bar</strong> for bedrock cracks</li>
+    </ol>
+    <p>Add gloves, sunscreen, water, snacks, and a trash bag (we'll talk stewardship soon).</p>
+    <p><strong>The rhythm:</strong> dig below the water line → classify → pan → tease color into the snuffer. First pan might be all black sand. Fifth pan might have twenty flakes. Fiftieth pan might have a picker that makes you holler.</p>
+    <p>Find inside bends, bedrock cracks, and behind boulders where heavy gold drops out. If somebody official rolls up, smile big and show you're legal — I've never had trouble when I was doing it right.</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Need a pan? Need a legal spot?</p>
+      <p style="margin:0 0 12px;font-size:15px;">Buzzard's <strong>Gold Catcher pan</strong> is still what I use today — free pan, $8 flat U.S. shipping, one per household:</p>
+      <a href="https://gpaastore.com/pages/free-gold-pan?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-04-free-pan" class="btn">Free Gold Catcher pan →</a>
+      <p style="margin:16px 0 12px;font-size:15px;">When you're ready for <strong>member-only claims</strong> from Alaska to Alabama:</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-04-join" class="btn btn-dark">GPAA membership</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Sharpen your panning between trips</p>
+      <p style="margin:0 0 16px;font-size:15px;">Lucky Nugget ships on your schedule — Small, Medium, or Large bags of real paydirt. Members pan at home and still get that yell-when-you-see-yellow moment.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-04-paydirt" class="btn btn-dark">Set up Lucky Nugget →</a>
+    </div>
+    {% endif %}
+
+    <p>Next: why gold fever is a <em>family</em> disease — the best kind there is.</p>
+    <p>— Tom</p>
+  </div>
+  <div class="footer">
+    <p>GPAA · <a href="{{ manage_preferences }}">Preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

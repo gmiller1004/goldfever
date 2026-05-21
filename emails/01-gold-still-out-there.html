@@ -1,0 +1,58 @@
+<!--
+  SUBJECT: Tom Massie: the gold didn't run off
+  PREVIEW: Pickers in a pan last Saturday. New gold every season — here's why.
+  TRIGGER: Flow Email 2
+  DELAY: 2 days after Email 1
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style type="text/css">
+    body { margin:0; padding:0; background:#f7f4ef; font-family:Georgia,serif; color:#1c2834; }
+    .wrapper { max-width:600px; margin:0 auto; background:#fff; }
+    .body { padding:32px 24px 28px; font-size:16px; line-height:1.6; }
+    .body p { margin:0 0 16px; }
+    .cta-box { background:#f7f4ef; border-left:4px solid #c9a227; padding:16px 18px; margin:24px 0; }
+    .btn { display:inline-block; background:#c9a227; color:#1c2834!important; text-decoration:none; font-weight:bold; padding:12px 20px; border-radius:4px; margin:6px 6px 0 0; font-size:14px; }
+    .btn-dark { background:#1c2834; color:#fff!important; }
+    .footer { background:#f7f4ef; border-top:1px solid #ebe6dc; color:#3d4f5f; padding:20px; font-size:12px; text-align:center; }
+    .footer a { color:#2d5a6b; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="body">
+    <p>Howdy{% if first_name %}, {{ first_name }}{% endif %} —</p>
+    <p>Every week somebody tells me, <em>"Tom, ain't all the gold gone by now?"</em></p>
+    <p>I just laugh and pull the little vial out of my pocket — pickers I found last Saturday afternoon on ground that's been worked for a hundred years.</p>
+    <p>Rivers move gold. Floods scrub fresh bedrock. Every year new shiny shows up for folks with a pan and a little know-how. You don't need a TV crew. You need a shovel, a gold pan, and a creek that'll let you in.</p>
+    <p>That's Chapter 1 in your guide: <strong>gold is still out there</strong>, waiting on regular people like us.</p>
+    <p>The 1872 Mining Law still gives everyday prospectors a fair shake on a whole lot of public ground — hand panning, detecting, small sluices — when you use common sense and respect the resource.</p>
+
+    {% if not person|lookup:'Active Membership Type' %}
+    <div class="cta-box">
+      <p style="margin:0 0 12px;font-weight:bold;">Want legal claim access when you're ready?</p>
+      <p style="margin:0 0 16px;font-size:15px;">The guide is a general resource on its own. <strong>GPAA membership unlocks member-only claims</strong> — search the Property Guide, read trip reports, and keep what you find on GPAA-access ground.</p>
+      <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-01-join" class="btn">Explore membership</a>
+      <a href="https://www.goldprospectors.org/properties?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-01-properties" class="btn btn-dark">Property Guide</a>
+    </div>
+    {% endif %}
+
+    {% if person|lookup:'Active Membership Type' %}
+    <div class="cta-box" style="border-left-color:#2d5a6b;">
+      <p style="margin:0 0 12px;font-weight:bold;">Rain on the weekend forecast?</p>
+      <p style="margin:0 0 16px;font-size:15px;">Lucky Nugget ships paydirt on your schedule — pan at home, keep your eye sharp, and still yell when color shows up in the vial. Members tell me it's the best winter therapy going.</p>
+      <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=email-01-paydirt" class="btn btn-dark">See Lucky Nugget →</a>
+    </div>
+    {% endif %}
+
+    <p>Tomorrow: the two sentences that opened more private creeks than any map Dad ever drew.</p>
+    <p>— Tom</p>
+  </div>
+  <div class="footer">
+    <p>GPAA · <a href="{{ manage_preferences }}">Preferences</a> · <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!--
+  KLAVIYO CTA BLOCKS — paste at bottom of each email body.
+  Property: Active Membership Type (any value = current GPAA member)
+-->
+
+{% if not person|lookup:'Active Membership Type' %}
+<div class="cta-box">
+  <p style="margin:0 0 12px;font-weight:bold;">When you want legal claim access</p>
+  <p style="margin:0 0 16px;font-size:15px;">This guide is a general resource — it stands on its own. GPAA membership unlocks <strong>member-only claims</strong> (200+ areas, 90,000+ acres), the Property Guide, chapters, and more.</p>
+  <a href="https://www.goldprospectors.org/join?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=join-cta" class="btn">See membership options</a>
+  <a href="https://www.goldprospectors.org/properties?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=property-guide" class="btn btn-dark">Property Guide</a>
+</div>
+{% endif %}
+
+{% if person|lookup:'Active Membership Type' %}
+<div class="cta-box" style="border-left-color:#2d5a6b;">
+  <p style="margin:0 0 12px;font-weight:bold;">Can't get to the creek this week?</p>
+  <p style="margin:0 0 16px;font-size:15px;">Lucky Nugget Paydirt ships real gold-bearing dirt to your door on your schedule — pan at the kitchen table, practice with the kids, keep the fever alive between outings. About 1 in 25 bags hits a bonus nugget or loaded bag.</p>
+  <a href="https://gpaastore.com/products/gpaas-lucky-nugget-paydirt?utm_source=klaviyo&utm_medium=email&utm_campaign=gold-fever-nurture&utm_content=lucky-nugget" class="btn btn-dark">Lucky Nugget subscription →</a>
+</div>
+{% endif %}
