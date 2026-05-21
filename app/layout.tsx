@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { BOOK_TITLE } from "@/lib/constants";
+import { withBasePath } from "@/lib/paths";
+
+const favicon = withBasePath("/gpaa-favicon.png");
 
 export const metadata: Metadata = {
   title: `${BOOK_TITLE} | Free Download`,
   description:
     "Find real gold this weekend without locked gates or guesswork. Tom Massie's free guide — PDF, EPUB, and a full Gold Fever episode.",
+  icons: {
+    icon: favicon,
+    shortcut: favicon,
+    apple: favicon,
+  },
   openGraph: {
     title: BOOK_TITLE,
     description:
